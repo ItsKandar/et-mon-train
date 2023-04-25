@@ -6,11 +6,60 @@ import sqlite3
 import random
 from config import RE_TOKEN, DEV_ID, DEV_TOKEN, DEVMODE, SNCF_API_KEY
 
-intents = discord.Intents.default()
-intents.message_content = True
-intents.messages = True
+conn = sqlite3.connect("et-mon-train.db")
+c = conn.cursor()
 
-bot = commands.Bot(command_prefix="$", intents=intents, help_command=None)
+c.execute("CREATE TABLE IF NOT EXISTS servers (server_id INTEGER PRIMARY KEY, prefix TEXT)")
+c.execute("CREATE TABLE IF NOT EXISTS users (user_id INTEGER PRIMARY KEY, wins INTEGER)")
+
+# Fonction qui verifie si une colonne existe dans une table
+def column_exists(cursor, table_name, column_name):
+    cursor.execute("PRAGMA table_info({})".format(table_name))
+    columns = cursor.fetchall()
+    for column in columns:
+        if column[1] == column_name:
+            return True
+    return False
+
+if not column_exists(c, "servers", "channel_id"):
+    c.execute("ALTER TABLE servers ADD COLUMN channel_id INTEGER")
+
+if not column_exists(c, "users", "user_id"):
+    c.execute("ALTER TABLE users ADD COLUMN user_id INTEGER")
+
+# Initialisation du bot
+class Bot(commands.Bot):
+    def __init__(self):
+        intents = discord.Intents.default()
+        intents.message_content = True
+
+        super().__init__(command_prefix=commands.when_mentioned_or('$'), intents=intents)
+
+    async def on_ready(self):
+        print(f'Logged in as {self.user} (ID: {self.user.id})')
+        print('------')
+
+class Pages(discord.ui.View):
+    def __init__(self):
+        super().__init__()
+        self.value = None
+
+    # When the confirm button is pressed, set the inner value to `True` and
+    # stop the View from listening to more input.
+    # We also send the user an ephemeral message that we're confirming their choice.
+    @discord.ui.button(label='Precedent', style=discord.ButtonStyle.grey)
+    async def confirm(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message('Page precedente', ephemeral=True)
+        self.value = False
+        self.stop()
+
+    @discord.ui.button(label='Suivant', style=discord.ButtonStyle.green)
+    async def cancel(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message('Page suivante', ephemeral=True)
+        self.value = True
+        self.stop()
+
+bot = Bot()
 
 async def fetch_train_info(train_id):
     async with aiohttp.ClientSession() as session:
@@ -40,7 +89,22 @@ async def fetch_all_trains():
                 journey["departure_time"] = departure_stop["arrival_time"]
                 journey["arrival_time"] = arrival_stop["departure_time"]
             return data
+        
+async def change_page(ctx, trains_chunks, page):
+    view = Pages()
+    trains_list = "\n".join([f"{train_id.split(':')[0]} - {train_name} | Départ : {departure_station} ({departure_time}) | Arrivée : {arrival_station} ({arrival_time})" for train_id, train_name, departure_station, arrival_station, departure_time, arrival_time in trains_chunks[page]])
+    message = await ctx.response.send_message(f"🚆 Liste des trains en circulation (Page {page + 1}/{len(trains_chunks)}):\n{trains_list}", view=view)
+    await view.wait()
+    if view.value is None:
+        print("Timeout")
+    elif view.value:
+        page+=1
+    elif not view.value:
+        page-=1
+    else:
+        print("Cancelled")
 
+    await discord.Interaction.response.edit_message(content=f"🚆 Liste des trains en circulation (Page {page + 1}/{len(trains_chunks)}):\n{trains_list}")
         
 async def fetch_test():
     async with aiohttp.ClientSession() as session:
@@ -55,6 +119,7 @@ async def on_ready():
         print(f"Synced {synced} commands.")
     except Exception as e:
         print(f"Failed to sync commands: {e}")
+    await bot.change_presence(activity=discord.Game(name='ET MON TRAIN ?!'))
 
 @bot.tree.command(name="info")
 async def info(ctx, train_id: str): 
@@ -107,13 +172,12 @@ async def get_all_trains(ctx):
         
         if trains:
             trains_chunks = [trains[i:i + 10] for i in range(0, len(trains), 10)]
-            for chunk in trains_chunks:
-                trains_list = "\n".join([f"{train_id.split(':')[0]} - {train_name} | Départ : {departure_station} ({departure_time}) | Arrivée : {arrival_station} ({arrival_time})" for train_id, train_name, departure_station, arrival_station, departure_time, arrival_time in chunk])
-                await ctx.response.send_message(f"🚆 Liste des trains en circulation :\n{trains_list}")
+            await change_page(ctx, trains_chunks, 0)
         else:
             await ctx.response.send_message("⚠️ Aucun train en circulation actuellement.")
     except KeyError:
         await ctx.response.send_message("⚠️ Erreur lors de la récupération des trains. Veuillez réessayer.")
+
 
 
 @bot.tree.command(name="test")
