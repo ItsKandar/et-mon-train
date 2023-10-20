@@ -71,6 +71,11 @@ async def fetch_train_id(departure_station, arrival_station):
         async with session.get(f"https://api.sncf.com/v1/coverage/sncf/journeys?from={departure_station}&to={arrival_station}", headers={"Authorization": SNCF_API_KEY}) as response:
             return await response.json()
 
+async def fetch_all_stations():
+    async with aiohttp.ClientSession() as session:
+        async with session.get(f"https://api.sncf.com/v1/coverage/sncf/stop_areas?", headers={"Authorization": SNCF_API_KEY}) as response: 
+            return await response.json()
+
 async def fetch_stations_by_city(city):
     async with aiohttp.ClientSession() as session:
         async with session.get(f"https://api.sncf.com/v1/coverage/sncf/areas?type=stop_area&q={city}", headers={"Authorization": SNCF_API_KEY}) as response:
@@ -108,7 +113,7 @@ async def change_page(ctx, trains_chunks, page):
         
 async def fetch_test():
     async with aiohttp.ClientSession() as session:
-        async with session.get(f"https://api.sncf.com/v1/coverage/sncf/journeys?from=admin:7444extern&to=admin:120965extern&datetime=20170123T140151", headers={"Authorization": SNCF_API_KEY}) as response:
+        async with session.get(f"https://api.sncf.com/v1/coverage/sncf/stop_areas/stop_area%3ASNCF%3A87171009/departures?", headers={"Authorization": SNCF_API_KEY}) as response:
             return await response.json()
 
 @bot.event
@@ -178,7 +183,9 @@ async def get_all_trains(ctx):
     except KeyError:
         await ctx.response.send_message("⚠️ Erreur lors de la récupération des trains. Veuillez réessayer.")
 
-
+@bot.tree.command(name="getallstations")
+async def get_all_stations(ctx):
+    await ctx.response.send_message(await fetch_all_stations())
 
 @bot.tree.command(name="test")
 async def test(ctx):
