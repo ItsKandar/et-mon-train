@@ -95,6 +95,11 @@ async def fetch_all_trains():
                 journey["arrival_time"] = arrival_stop["departure_time"]
             return data
         
+async def fetch_info_by_id(area_id):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(f"https://api.sncf.com/v1/coverage/sncf/stop_areas/{area_id}", headers={"Authorization": SNCF_API_KEY}) as response:
+            return await response.json()
+        
 async def change_page(ctx, trains_chunks, page):
     view = Pages()
     trains_list = "\n".join([f"{train_id.split(':')[0]} - {train_name} | Départ : {departure_station} ({departure_time}) | Arrivée : {arrival_station} ({arrival_time})" for train_id, train_name, departure_station, arrival_station, departure_time, arrival_time in trains_chunks[page]])
@@ -147,6 +152,11 @@ async def info(ctx, train_id: str):
     except KeyError:
         await ctx.response.send_message("⚠️ Train introuvable. Veuillez vérifier l'identifiant du train.")
 
+@bot.tree.command(name='getcoveragebyid')
+async def getcoveragebyid(ctx, station: str):
+    train_info = await fetch_info_by_id(station)
+    await ctx.response.send_message(train_info)
+
 @bot.tree.command(name="getid")
 async def get_train_id(ctx, departure_station: str, arrival_station: str):
     train_info = await fetch_train_id(departure_station, arrival_station)
@@ -190,5 +200,12 @@ async def get_all_stations(ctx):
 @bot.tree.command(name="test")
 async def test(ctx):
     await ctx.response.send_message(await fetch_test())
+
+# Commandes admin
+@bot.tree.command(name="stop")
+@commands.is_owner()
+async def stop(ctx):
+    await ctx.response.send_message("🛑 Arrêt du bot...")
+    await bot.close()
 
 bot.run(RE_TOKEN)
