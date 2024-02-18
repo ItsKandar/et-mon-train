@@ -1,0 +1,444 @@
+
+
+{"total_count": 215, "results": 
+[{"dataset_id": "impots-et-taxes-2017-cco", "dataset_uid": "da_qkvr9a", "has_records":
+true, "features": ["analyze"], "visibility": "domain", "attachments": [], "alternative_exports": [], "data_visible":
+true, "fields": [{"name": "id", "label": "#", "type": "int", "annotations": {}, "description": null}, {"name": "totaux",
+"label": "Totaux", "type": "text", "annotations": {}, "description": null}, {"name": "en_millions_d_euros", "label": "en
+millions d'euros", "type": "text", "annotations": {}, "description": null}, {"name": "31_12_2015", "label":
+"31/12/2015", "type": "double", "annotations": {}, "description": null}, {"name": "31_12_2016", "label": "31/12/2016",
+"type": "double", "annotations": {}, "description": null}, {"name": "31_12_2017", "annotations": {"unit": "mois",
+"facetsort": "-count"}, "label": "31/12/2017", "type": "text", "description": null}, {"name": "31_12_2018", "label":
+"31/12/2018", "type": "double", "annotations": {}, "description": null}, {"name": "31_12_2019", "label": "31/12/2019",
+"type": "double", "annotations": {}, "description": null}, {"name": "31_12_2020", "label": "31/12/2020", "type":
+"double", "annotations": {}, "description": null}], "metas": {"dcat": {"created": null, "issued": null, "creator": null,
+"contributor": null, "contact_name": null, "contact_email": null, "accrualperiodicity": null, "spatial": null,
+"temporal": null, "granularity": null, "dataquality": null, "publisher_type": null, "conforms_to": null,
+"temporal_coverage_start": null, "temporal_coverage_end": null, "accessRights": null}, "default": {"title": "Imp\u00f4ts
+et taxes CCO du groupe SNCF R\u00e9seau depuis 2015", "description": "<p>Imp\u00f4ts et taxes depuis 2015 issus du
+    Rapport Financier du groupe SNCF R\u00e9seau au 31 d\u00e9cembre de chaque ann\u00e9e (Comptes consolid\u00e9s
+    incluant l'EPIC SNCF RESEAU et ses filiales)</p>", "theme": ["R\u00e9seau"], "keyword": ["SNCF RESEAU", "Comptes
+Consolid\u00e9s", "imp\u00f4ts", "taxes"], "license": "Open Database License (ODbL)", "license_url":
+"https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages": ["fr"], "timezone": null, "modified":
+"2022-03-24T10:36:20+00:00", "modified_updates_on_metadata_change": true, "modified_updates_on_data_change": true,
+"data_processed": "2021-07-01T13:27:20+00:00", "metadata_processed": "2024-02-18T02:14:23.215000+00:00",
+"geographic_reference": ["world_fr"], "geographic_reference_auto": true, "territory": ["France"], "geometry_types":
+null, "bbox": null, "publisher": "SNCF R\u00e9seau", "references": null, "records_count": 10, "attributions": null,
+"source_domain": null, "source_domain_title": null, "source_domain_address": null, "source_dataset": null,
+"shared_catalog": null, "federated": true, "oauth_scope": null, "parent_domain": "datasncf"}, "custom": {"cycle": null,
+"periodicity": "Annuelle"}}}, {"dataset_id": "sncf-image-open-data-mensuel-harris", "dataset_uid": "da_6xoazn",
+"has_records": true, "features": ["analyze", "timeserie"], "visibility": "domain", "attachments": [],
+"alternative_exports": [], "data_visible": true, "fields": [{"name": "date", "description": null, "annotations":
+{"facet": true, "timeserie_precision": "month", "facetsort": "alphanum", "timerangeFilter": true}, "label": "Date",
+"type": "date"}, {"name": "indicateurs", "description": "Pour plus d'infos sur les indicateurs, consultez l'onglet
+\"Informations\"", "annotations": {"facet": true}, "label": "Indicateurs", "type": "text"}, {"name": "global",
+"description": null, "annotations": {"facetsort": "-count", "unit": "%"}, "label": "Global", "type": "int"}, {"name":
+"clients", "description": null, "annotations": {"facetsort": "-count", "unit": "%"}, "label": "Clients", "type": "int"},
+{"name": "non_clients", "description": null, "annotations": {"facetsort": "-count", "unit": "%"}, "label":
+"Non-Clients", "type": "int"}], "metas": {"dcat": {"created": "2022-11-16", "issued": null, "creator": null,
+"contributor": null, "contact_name": null, "contact_email": null, "accrualperiodicity": null, "spatial": null,
+"temporal": null, "granularity": null, "dataquality": null, "publisher_type": null, "conforms_to": null,
+"temporal_coverage_start": "2021-12-31T23:00:00+00:00", "temporal_coverage_end": null, "accessRights": null}, "default":
+{"title": "Barom\u00e8tre notes d'opinion SNCF depuis janvier 2022 (Harris Interactive)", "description": "<p
+    class=\"MsoNormal\" style=\"font-family: sans-serif;\">Ce jeu de donn\u00e9es est issu du barom\u00e8tre image de la
+    SNCF qui mesure l\u2019opinion des Fran\u00e7ais sur la SNCF selon les 5 indicateurs suivants\u00a0:
+    \u00a0l\u2019opinion globale, la perception de la ponctualit\u00e9, du prix, de l\u2019innovation, de
+    l\u2019information voyageurs et de l\u2019engagement environnemental de la SNCF. En janvier 2022, la SNCF a fait
+    \u00e9voluer le questionnaire et pose uniquement des questions sur une \u00e9chelle s\u00e9mantique. Ainsi, elle ne
+    diffuse plus une note moyenne sur 10, mais un pourcentage d\u2019opinions favorables. Toute utilisation de ces
+    donn\u00e9es doit tenir compte de la rupture d\u2019historique occasionn\u00e9e.<o:p></o:p>
+</p>
+<p class=\"MsoNormal\" style=\"font-family: sans-serif;\">Ce questionnaire est administr\u00e9 chaque mois, par mail,
+    \u00e0 1000 Fran\u00e7ais sur la base d\u2019un \u00e9chantillon repr\u00e9sentatif national.<o:p></o:p>
+</p>
+<p class=\"MsoNormal\" style=\"font-family: sans-serif;\">La SNCF a mandat\u00e9 l\u2019institut de sondage
+    ind\u00e9pendant Harris Interactive pour la r\u00e9alisation de ce barom\u00e8tre.<o:p></o:p>
+</p>
+<p class=\"MsoNormal\" style=\"font-family: sans-serif;\">
+    <o:p>\u00a0</o:p>
+</p>
+<p class=\"MsoNormal\" style=\"font-family: sans-serif;\">Les indicateurs\u00a0:</p>
+<table class=\"table table-bordered\" style=\"width: 515px;\">
+    <tbody>
+        <tr>
+            <td><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Opinion globale</span><br /></td>
+            <td>
+                <p class=\"MsoNormal\"><span style=\"font-weight: bolder;\">Quelle opinion g\u00e9n\u00e9rale avez-vous
+                        de La SNCF ?<o:p></o:p></span></p><i><span style=\"font-size: 11pt; font-family: Calibri,
+                        sans-serif;\">Tr\u00e8s bonne opinion / Plut\u00f4t bonne opinion / Plut\u00f4t mauvaise opinion
+                        / Tr\u00e8s mauvaise opinion /Ne se prononce pas</span></i><span style=\"font-size: 11pt;
+                    font-family: Calibri, sans-serif;\"></span>
+            </td>
+            <td>
+                <p class=\"MsoNormal\"><span style=\"font-weight: bolder;\">Pourcentage donn\u00e9\u00a0:<o:p></o:p>
+                        </span></p>
+                <p class=\"MsoNormal\">Tr\u00e8s bonne opinion<o:p></o:p>
+                </p><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">+ plut\u00f4t bonne
+                    opinion</span><br />
+            </td>
+        </tr>
+        <tr>
+            <td><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Ponctualit\u00e9</span><br /></td>
+            <td>
+                <p class=\"MsoNormal\">\u00cates-vous d\u2019accord ou non avec la phrase\u2026\u00a0<span
+                        style=\"font-weight: bolder;\">La SNCF a des trains qui partent et arrivent \u00e0
+                        l\u2019heure</span><span class=\"eop\"><span style=\"font-size: 12pt; background-image: initial;
+                            background-position: initial; background-size: initial; background-repeat: initial;
+                            background-attachment: initial; background-origin: initial; background-clip:
+                            initial;\">\u00a0</span></span><span class=\"eop\"><span style=\"font-size: 12pt;
+                            background-image: initial; background-position: initial; background-size: initial;
+                            background-repeat: initial; background-attachment: initial; background-origin: initial;
+                            background-clip: initial;\">
+                            <o:p></o:p>
+                        </span></span></p><i><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Tout
+                        \u00e0 fait d\u2019accord / Plut\u00f4t d\u2019accord / Plut\u00f4t pas d\u2019accord / Pas du
+                        tout d\u2019accord / Ne se prononce pas\u00a0</span></i><br />
+            </td>
+            <td>
+                <p class=\"MsoNormal\"><span style=\"font-weight: bolder;\">Pourcentage donn\u00e9\u00a0:<o:p></o:p>
+                        </span></p>
+                <p class=\"MsoNormal\">Tout \u00e0 fait d\u2019accord<o:p></o:p>
+                </p><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">+ plut\u00f4t
+                    d\u2019accord</span><br />
+            </td>
+        </tr>
+        <tr>
+            <td><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Prix</span><br /></td>
+            <td>
+                <p class=\"MsoNormal\">\u00cates-vous d\u2019accord ou non\u00a0avec la phrase\u2026\u00a0<span
+                        style=\"font-weight: bolder;\">La SNCF propose des tarifs qui permettent \u00e0 tous de voyager
+                        <o:p></o:p></span></p><i><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Tout
+                        \u00e0 fait d\u2019accord / Plut\u00f4t d\u2019accord / Plut\u00f4t pas d\u2019accord / Pas du
+                        tout d\u2019accord / Ne se prononce pas</span></i><br />
+            </td>
+            <td>
+                <p class=\"MsoNormal\"><span style=\"font-weight: bolder;\">Pourcentage donn\u00e9\u00a0:<o:p></o:p>
+                        </span></p>
+                <p class=\"MsoNormal\">Tout \u00e0 fait d\u2019accord<o:p></o:p>
+                </p><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">+ plut\u00f4t
+                    d\u2019accord</span><br />
+            </td>
+        </tr>
+        <tr>
+            <td><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Innovation</span><br /></td>
+            <td>
+                <p class=\"MsoNormal\">\u00cates-vous d\u2019accord ou non avec la phrase\u2026\u00a0<span
+                        style=\"font-weight: bolder;\">La SNCF est une entreprise innovante<o:p></o:p></span></p>
+                <i><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Tout \u00e0 fait d\u2019accord /
+                        Plut\u00f4t d\u2019accord / Plut\u00f4t pas d\u2019accord / Pas du tout d\u2019accord / Ne se
+                        prononce pas</span></i><br />
+            </td>
+            <td>
+                <p class=\"MsoNormal\"><span style=\"font-weight: bolder;\">Pourcentage donn\u00e9\u00a0:<o:p></o:p>
+                        </span></p>
+                <p class=\"MsoNormal\">Tout \u00e0 fait d\u2019accord<o:p></o:p>
+                </p><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">+ plut\u00f4t
+                    d\u2019accord</span><br />
+            </td>
+        </tr>
+        <tr>
+            <td><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Information voyageurs</span><br />
+            </td>
+            <td>
+                <p class=\"MsoNormal\">\u00cates-vous d\u2019accord ou non avec la phrase\u2026 La SNCF\u00a0<span
+                        style=\"font-weight: bolder;\">Informe bien ses clients avant, pendant et apr\u00e8s leur voyage
+                        <o:p></o:p></span></p><i><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Tout
+                        \u00e0 fait d\u2019accord / Plut\u00f4t d\u2019accord / Plut\u00f4t pas d\u2019accord / Pas du
+                        tout d\u2019accord / Ne se prononce pas</span></i><br />
+            </td>
+            <td>
+                <p class=\"MsoNormal\"><span style=\"font-weight: bolder;\">Pourcentage donn\u00e9\u00a0:<o:p></o:p>
+                        </span></p>
+                <p class=\"MsoNormal\">Tout \u00e0 fait d\u2019accord<o:p></o:p>
+                </p><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">+ plut\u00f4t
+                    d\u2019accord</span><br />
+            </td>
+        </tr>
+        <tr>
+            <td><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Environnement</span><br /></td>
+            <td>
+                <p class=\"MsoNormal\">\u00cates-vous d\u2019accord ou non avec la phrase\u2026 La SNCF\u00a0<span
+                        style=\"font-weight: bolder;\">Propose des modes de transport respectueux de
+                        l'environnement</span>
+                    <o:p></o:p>
+                </p><i><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">Tout \u00e0 fait d\u2019accord
+                        / Plut\u00f4t d\u2019accord / Plut\u00f4t pas d\u2019accord / Pas du tout d\u2019accord / Ne se
+                        prononce pas</span></i><br />
+            </td>
+            <td>
+                <p class=\"MsoNormal\"><span style=\"font-weight: bolder;\">Pourcentage donn\u00e9\u00a0:<o:p></o:p>
+                        </span></p>
+                <p class=\"MsoNormal\">Tout \u00e0 fait d\u2019accord<o:p></o:p>
+                </p><span style=\"font-size: 11pt; font-family: Calibri, sans-serif;\">+ plut\u00f4t
+                    d\u2019accord</span><br />
+            </td>
+        </tr>
+    </tbody>
+</table>", "theme": ["Marque et communication externe"], "keyword": ["Image SNCF", "Barom\u00e8tre d'image", "Opinion ",
+"Marque"], "license": "Open Data Commons Open Database License (ODbL)", "license_url":
+"https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages": ["fr"], "timezone": null, "modified":
+"2023-09-25T09:29:36+00:00", "modified_updates_on_metadata_change": false, "modified_updates_on_data_change": true,
+"data_processed": "2023-09-25T09:29:36+00:00", "metadata_processed": "2023-09-25T09:29:36.789000+00:00",
+"geographic_reference": ["world_fr"], "geographic_reference_auto": true, "territory": ["France"], "geometry_types":
+null, "bbox": null, "publisher": "SNCF", "references": null, "records_count": 120, "attributions": null,
+"source_domain": null, "source_domain_title": null, "source_domain_address": null, "source_dataset": null,
+"shared_catalog": null, "federated": false, "oauth_scope": null, "parent_domain": null}, "custom": {"cycle": null,
+"periodicity": "Mensuelle"}}}, {"dataset_id": "detecteurs-de-boite-chaude", "dataset_uid": "da_ma9mdc", "has_records":
+true, "features": ["analyze", "geo"], "visibility": "domain", "attachments": [], "alternative_exports": [],
+"data_visible": true, "fields": [{"name": "guid", "label": "GUID", "type": "text", "annotations": {}, "description":
+null}, {"name": "idreseau", "label": "IDRESEAU", "type": "int", "annotations": {}, "description": null}, {"name":
+"code_ligne", "annotations": {"facet": true, "sortable": true}, "label": "CODE_LIGNE", "type": "text", "description":
+null}, {"name": "lib_ligne", "label": "LIB_LIGNE", "type": "text", "annotations": {}, "description": null}, {"name":
+"rg_troncon", "label": "RG_TRONCON", "type": "int", "annotations": {}, "description": null}, {"name": "code_voie",
+"annotations": {"sortable": true}, "label": "CODE_VOIE", "type": "text", "description": null}, {"name": "pk",
+"annotations": {"facet": true, "sortable": true}, "label": "PK", "type": "text", "description": null}, {"name":
+"libelle", "label": "LIBELLE", "type": "text", "annotations": {}, "description": null}, {"name": "idgaia", "label":
+"IDGAIA", "type": "text", "annotations": {}, "description": null}, {"name": "x_l93", "label": "X_L93", "type": "double",
+"annotations": {}, "description": null}, {"name": "y_l93", "label": "Y_L93", "type": "double", "annotations": {},
+"description": null}, {"name": "x_wgs84", "label": "X_WGS84", "type": "double", "annotations": {}, "description": null},
+{"name": "y_wgs84", "label": "Y_WGS84", "type": "double", "annotations": {}, "description": null}, {"name": "c_geo",
+"annotations": {"facetsort": "-count"}, "label": "C_GEO", "type": "geo_point_2d", "description": null}, {"name":
+"geo_point_2d", "label": "Geo Point", "type": "geo_point_2d", "annotations": {}, "description": null}, {"name":
+"geo_shape", "label": "Geo Shape", "type": "geo_shape", "annotations": {}, "description": null}], "metas": {"dcat":
+{"created": null, "issued": null, "creator": null, "contributor": null, "contact_name": null, "contact_email": null,
+"accrualperiodicity": null, "spatial": null, "temporal": null, "granularity": null, "dataquality": null,
+"publisher_type": null, "conforms_to": null, "temporal_coverage_start": null, "temporal_coverage_end": null,
+"accessRights": null}, "default": {"title": "D\u00e9tecteurs de boite chaude", "description": "<p>Liste et localisation
+    des d\u00e9tecteurs de boite chaude du R\u00e9seau Ferr\u00e9 National.</p>
+<p>Ce jeu publie les donn\u00e9es en l\u2019\u00e9tat des bases\u00a0 au 31/12/2021.</p>
+<p>Les coordonn\u00e9es sont une conversion des coordonn\u00e9es ferroviaires en Lambert 93 et en WGS 84 (EPSG:3857).
+</p>
+<p>data de mise \u00e0 jour 21/04/2023</p>", "theme": ["Description du r\u00e9seau"], "keyword": ["SNCF RESEAU",
+"D\u00e9tecteurs de boite chaude", "Infrastructure", "G\u00e9olocalisation"], "license": "Open Database License (ODbL)",
+"license_url": "https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages": ["fr"], "timezone":
+"Europe/Paris", "modified": "2020-05-26T16:17:43+00:00", "modified_updates_on_metadata_change": true,
+"modified_updates_on_data_change": true, "data_processed": "2023-06-28T15:08:37+00:00", "metadata_processed":
+"2024-02-18T02:10:24.837000+00:00", "geographic_reference": ["world_fr", "world_be"], "geographic_reference_auto": true,
+"territory": ["France", "Belgium"], "geometry_types": ["Point"], "bbox": null, "publisher": "SNCF R\u00e9seau",
+"references": null, "records_count": 415, "attributions": null, "source_domain": null, "source_domain_title": null,
+"source_domain_address": null, "source_dataset": null, "shared_catalog": null, "federated": true, "oauth_scope": null,
+"parent_domain": "datasncf"}, "custom": {"cycle": null, "periodicity": "Annuelle"}}}, {"dataset_id":
+"trajectoire-des-revenus-du-groupe-sncf", "dataset_uid": "da_p2guj6", "has_records": true, "features": ["analyze",
+"timeserie"], "visibility": "domain", "attachments": [], "alternative_exports": [], "data_visible": true, "fields":
+[{"name": "date", "annotations": {"timeserie_precision": "year", "facetsort": "alphanum", "facet": true}, "description":
+null, "label": "Date", "type": "date"}, {"name": "total_ca_en_milliards_d_euros", "annotations": {"facetsort":
+"-count"}, "description": "CA (en milliards d'euros actualis\u00e9s \u00e0 2014)\n", "label": "CA (en milliards
+d'euros)", "type": "int"}, {"name": "remunerations", "annotations": {"facetsort": "-count"}, "description": "", "label":
+"contributions des Autorit\u00e9s Organisatrices de Transports et du STIF aux activit\u00e9s voyageurs", "type":
+"double"}, {"name": "transport_voyageurs_epic", "annotations": {"facetsort": "-count"}, "description": null, "label":
+"Transport Voyageurs EPIC", "type": "double"}, {"name": "filiales_voyageurs_keolis", "annotations": {"facetsort":
+"-count"}, "description": null, "label": "Filiales Voyageurs (Keolis)", "type": "double"}, {"name": "fret_epic",
+"annotations": {"facetsort": "-count"}, "description": null, "label": "Fret EPIC", "type": "double"}, {"name":
+"filiales_logistics", "annotations": {"facetsort": "-count"}, "description": null, "label": "Filiales Logistics",
+"type": "double"}, {"name": "convention_infra", "annotations": {"facetsort": "-count"}, "description": null, "label":
+"Convention infra", "type": "double"}, {"name": "autre_revenus_epic", "annotations": {"facetsort": "-count"},
+"description": null, "label": "Autre revenus EPIC", "type": "double"}, {"name": "commentaires", "annotations": {},
+"description": null, "label": "Commentaires", "type": "text"}], "metas": {"dcat": {"created": null, "issued": null,
+"creator": null, "contributor": null, "contact_name": null, "contact_email": null, "accrualperiodicity": "Annuelle",
+"spatial": null, "temporal": null, "granularity": "Depuis 1955", "dataquality": null, "publisher_type": null,
+"conforms_to": null, "temporal_coverage_start": null, "temporal_coverage_end": null, "accessRights": null}, "default":
+{"title": "Sources du chiffre d'affaires SNCF depuis 1955", "description": "<p>Trajectoire des revenus SNCF avec
+    plusieurs \u00e9tapes\u00a0(1955, 1994, 1999,2004, 2009 et 2014) depuis 1955 en milliards d'euros actualis\u00e9s
+    \u00e0 2014 (euros constants).\u00a0</p>
+<p>NB : les normes comptables appliqu\u00e9es ici sont les normes fran\u00e7aises avant 2007 et IFRS ensuite</p>",
+"theme": ["Informations institutionnelles et financi\u00e8res"], "keyword": ["Revenus", "Chiffre d'affaire", "Groupe
+SNCF", "Direction Strat\u00e9gie Finances"], "license": "Open Database License (ODbL)", "license_url":
+"https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages": ["fr"], "timezone": null, "modified":
+"2017-04-01T08:24:08+00:00", "modified_updates_on_metadata_change": false, "modified_updates_on_data_change": true,
+"data_processed": "2017-04-01T08:24:08+00:00", "metadata_processed": "2021-03-31T08:27:28.133000+00:00",
+"geographic_reference": ["world_fr"], "geographic_reference_auto": true, "territory": ["France"], "geometry_types":
+null, "bbox": null, "publisher": "SNCF", "references": null, "records_count": 6, "attributions": null, "source_domain":
+null, "source_domain_title": null, "source_domain_address": null, "source_dataset": null, "shared_catalog": null,
+"federated": false, "oauth_scope": null, "parent_domain": null}, "custom": {"cycle": null, "periodicity": null}}},
+{"dataset_id": "reglementation-travail", "dataset_uid": "da_ck92dp", "has_records": true, "features": ["analyze",
+"timeserie"], "visibility": "domain", "attachments": [], "alternative_exports": [], "data_visible": true, "fields":
+[{"name": "nom_document", "annotations": {}, "description": null, "label": "Nom du document", "type": "text"}, {"name":
+"type_document", "annotations": {"facet": true, "sortable": true}, "description": null, "label": "Type de document",
+"type": "text"}, {"name": "date", "annotations": {"facetsort": "-count", "facet": true, "timeserie_precision": "year"},
+"description": null, "label": "Date", "type": "date"}, {"name": "url", "annotations": {}, "description": "Lien de
+t\u00e9l\u00e9chargement du document", "label": "URL", "type": "text"}], "metas": {"dcat": {"created": "2016-02-22",
+"issued": "2016-03-03", "creator": null, "contributor": null, "contact_name": null, "contact_email": null,
+"accrualperiodicity": "Sur \u00e9v\u00e8nement", "spatial": null, "temporal": "Depuis 1999", "granularity": null,
+"dataquality": null, "publisher_type": null, "conforms_to": null, "temporal_coverage_start": null,
+"temporal_coverage_end": null, "accessRights": null}, "default": {"title": "R\u00e9glementations relatives aux
+conditions de travail", "description": "<div>R\u00e9glementations relatives aux conditions de travail\u00a0applicables
+    au Groupe public ferroviaire (d\u00e9cret de 1999 et RH\u00a0077) et aux entreprises de transport de marchandises
+    (d\u00e9cret de 2010).</div>
+<div>L'avant projet de d\u00e9cret socle relatif au r\u00e9gime de la dur\u00e9e du travail du personnel des entreprises
+    ferroviaires a \u00e9t\u00e9 adress\u00e9 par le\u00a0secr\u00e9taire d'Etat en charge des Transports, de la Mer et
+    de la P\u00eache\u00a0le 12 f\u00e9vrier 2016.</div>
+<div>L'Etat ouvre une phase de concertation susceptible de faire \u00e9voluer le texte, qui sera soumis au conseil
+    d'\u00e9tat pour publication probablement mi avril 2016.</div>\n<div>Il sera compl\u00e9t\u00e9 d'une convention
+    collective de Branche commune \u00e0 l'ensemble des entreprises de la branche et des accords propres \u00e0 chaque
+    entreprise pour adapter les r\u00e8gles g\u00e9n\u00e9rales \u00e0 l'organisation du travail de chacune.</div>",
+"theme": ["Social et ressources humaines"], "keyword": ["Conditions de travail", "Ressources humaines", "Salari\u00e9s",
+"Social", "Direction Coh\u00e9sion"], "license": "Open Database License (ODbL)", "license_url":
+"https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages": ["fr"], "timezone": null, "modified":
+"2017-04-13T14:23:56+00:00", "modified_updates_on_metadata_change": false, "modified_updates_on_data_change": true,
+"data_processed": "2017-04-13T14:23:56+00:00", "metadata_processed": "2021-03-30T13:28:22.054000+00:00",
+"geographic_reference": ["world_fr"], "geographic_reference_auto": true, "territory": ["France"], "geometry_types":
+null, "bbox": null, "publisher": "SNCF", "references": null, "records_count": 3, "attributions": null, "source_domain":
+null, "source_domain_title": null, "source_domain_address": null, "source_dataset": null, "shared_catalog": null,
+"federated": false, "oauth_scope": null, "parent_domain": null}, "custom": {"cycle": null, "periodicity":
+"Irr\u00e9guli\u00e8re"}}}, {"dataset_id": "lignes-par-statut", "dataset_uid": "da_pl3o49", "has_records": true,
+"features": ["analyze", "geo"], "visibility": "domain", "attachments": [], "alternative_exports": [], "data_visible":
+true, "fields": [{"name": "code_ligne", "description": "Num\u00e9ro de ligne du RFN", "annotations": {"facet": true,
+"sortable": true}, "label": "CODE_LIGNE", "type": "text"}, {"name": "lib_ligne", "description": "Libell\u00e9 de la
+ligne", "label": "LIB_LIGNE", "type": "text", "annotations": {}}, {"name": "statut", "description": "Statut de la
+ligne", "annotations": {"facet": true}, "label": "STATUT", "type": "text"}, {"name": "rg_troncon", "description":
+"Num\u00e9ro de tron\u00e7on de ligne", "label": "RG_TRONCON", "type": "int", "annotations": {}}, {"name": "pkd",
+"description": "Point Kilom\u00e9trique de d\u00e9but du tron\u00e7on de ligne", "annotations": {"sortable": true},
+"label": "PKD", "type": "text"}, {"name": "pkf", "description": "Point Kilom\u00e9trique fin du tron\u00e7on ligne",
+"label": "PKF", "type": "text", "annotations": {}}, {"name": "idgaia", "description": "Identifiant de la ligne dans la
+base GAIA ", "label": "IDGAIA", "type": "text", "annotations": {}}, {"name": "x_d_l93", "label": "X_D_L93", "type":
+"double", "annotations": {}, "description": null}, {"name": "y_d_l93", "label": "Y_D_L93", "type": "double",
+"annotations": {}, "description": null}, {"name": "x_f_l93", "label": "X_F_L93", "type": "double", "annotations": {},
+"description": null}, {"name": "y_f_l93", "label": "Y_F_L93", "type": "double", "annotations": {}, "description": null},
+{"name": "x_d_wgs84", "label": "X_D_WGS84", "type": "double", "annotations": {}, "description": null}, {"name":
+"y_d_wgs84", "label": "Y_D_WGS84", "type": "double", "annotations": {}, "description": null}, {"name": "x_f_wgs84",
+"label": "X_F_WGS84", "type": "double", "annotations": {}, "description": null}, {"name": "y_f_wgs84", "label":
+"Y_F_WGS84", "type": "double", "annotations": {}, "description": null}, {"name": "c_geo_d", "annotations": {"facetsort":
+"-count"}, "label": "C_GEO_D", "type": "geo_point_2d", "description": null}, {"name": "c_geo_f", "annotations":
+{"facetsort": "-count"}, "label": "C_GEO_F", "type": "geo_point_2d", "description": null}, {"name": "geo_point_2d",
+"label": "Geo Point", "type": "geo_point_2d", "annotations": {}, "description": null}, {"name": "geo_shape", "label":
+"Geo Shape", "type": "geo_shape", "annotations": {}, "description": null}], "metas": {"dcat": {"created": null,
+"issued": null, "creator": null, "contributor": null, "contact_name": null, "contact_email": null, "accrualperiodicity":
+null, "spatial": null, "temporal": null, "granularity": null, "dataquality": null, "publisher_type": null,
+"conforms_to": null, "temporal_coverage_start": null, "temporal_coverage_end": null, "accessRights": null}, "default":
+{"title": "Lignes par statut", "description": "<p>Liste des lignes du R\u00e9seau Ferr\u00e9 National par statut.</p>
+<p>Les portions de ligne du r\u00e9seau sont list\u00e9es dans ce jeu de donn\u00e9es par statut. </p>
+<p>Une ligne du fichier correspond \u00e0 une portion du r\u00e9seau qui a le m\u00eame statut. </p>
+<p>Les statuts sont les suivants : projet (PROJET), exploit\u00e9e (EXPLOITE), neutralis\u00e9e (NEUT), neutralis\u00e9e
+    et conserv\u00e9e (NEUT DEF), transf\u00e9r\u00e9e en voie de service (VS), ferm\u00e9e non d\u00e9pos\u00e9e (FERME
+    ND), ferm\u00e9e avec maintien en place de la voie (FERME MV), ferm\u00e9e et d\u00e9pos\u00e9e (FERME D),
+    ferm\u00e9e (FERME), ferm\u00e9e mise \u00e0 disposition de tiers (FERME DT), retranch\u00e9e (RETRANCHE),
+    d\u00e9class\u00e9e non vendue (DEC NV), d\u00e9class\u00e9e vendue (DEC V).</p>
+<p>Ce jeu publie les donn\u00e9es en l\u2019\u00e9tat des bases au 31/12/2022. </p>
+<p>Les coordonn\u00e9es g\u00e9ographiques sont une conversion des coordonn\u00e9es ferroviaires en Lambert 93 et en
+    WGS84 (EPSG:3857).</p>
+<p>Dans certains cas, la transformation de la localisation ferroviaire en coordonn\u00e9es g\u00e9ographiques n\u2019est
+    pas possible : ces coordonn\u00e9es n\u2019ont pas \u00e9t\u00e9 collect\u00e9es pour les lignes qui ne sont plus
+    exploit\u00e9es.</p>
+<p>date de mise \u00e0 jour 11/05/2023</p>", "theme": ["R\u00e9seau"], "keyword": ["SNCF RESEAU", "Lignes",
+"Infrastructure", "Statut", "G\u00e9olocalisation"], "license": "Open Database License (ODbL)", "license_url":
+"https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages": ["fr"], "timezone": "Europe/Paris",
+"modified": "2022-03-24T10:30:54+00:00", "modified_updates_on_metadata_change": true, "modified_updates_on_data_change":
+true, "data_processed": "2023-05-12T07:41:17+00:00", "metadata_processed": "2024-02-18T02:11:45.963000+00:00",
+"geographic_reference": ["world"], "geographic_reference_auto": true, "territory": ["World"], "geometry_types":
+["LineString", "MultiLineString"], "bbox": {"type": "Feature", "geometry": {"coordinates": [[[9.44911977276206,
+51.076054936274886], [-4.479243038222194, 51.076054936274886], [-4.479243038222194, 41.927543906494975],
+[9.44911977276206, 41.927543906494975], [9.44911977276206, 51.076054936274886]]], "type": "Polygon"}, "properties": {}},
+"publisher": "SNCF R\u00e9seau", "references": null, "records_count": 1853, "attributions": null, "source_domain": null,
+"source_domain_title": null, "source_domain_address": null, "source_dataset": null, "shared_catalog": null, "federated":
+true, "oauth_scope": null, "parent_domain": "datasncf"}, "custom": {"cycle": null, "periodicity": "Annuelle"}}},
+{"dataset_id": "engagements-hors-bilan-donnes-2017-cco", "dataset_uid": "da_3paqbr", "has_records": true, "features":
+["analyze", "timeserie"], "visibility": "domain", "attachments": [], "alternative_exports": [], "data_visible": true,
+"fields": [{"name": "id", "label": "#", "type": "int", "annotations": {}, "description": null}, {"name": "totaux",
+"label": "Totaux", "type": "text", "annotations": {}, "description": null}, {"name": "annee", "label": "Ann\u00e9e",
+"type": "text", "annotations": {}, "description": null}, {"name": "date", "label": "Date", "type": "date",
+"annotations": {}, "description": null}, {"name": "postes", "label": "Postes", "type": "text", "annotations": {},
+"description": null}, {"name": "operations", "label": "Op\u00e9rations", "type": "text", "annotations": {},
+"description": null}, {"name": "engagements_donnes_en_millions_d_euros", "label": "Engagements donn\u00e9s en millions
+d'euros", "type": "text", "annotations": {}, "description": null}], "metas": {"dcat": {"created": null, "issued": null,
+"creator": null, "contributor": null, "contact_name": null, "contact_email": null, "accrualperiodicity": null,
+"spatial": null, "temporal": null, "granularity": null, "dataquality": null, "publisher_type": null, "conforms_to":
+null, "temporal_coverage_start": null, "temporal_coverage_end": null, "accessRights": null}, "default": {"title":
+"Engagements hors bilan donn\u00e9s CCO du groupe SNCF R\u00e9seau depuis 2015", "description": "<p>EHB donn\u00e9s
+    depuis 2015 issus du Rapport Financier du groupe SNCF R\u00e9seau au 31 d\u00e9cembre de chaque ann\u00e9e (Comptes
+    consolid\u00e9s incluant l'EPIC SNCF RESEAU et ses filiales)</p>", "theme": ["R\u00e9seau"], "keyword": ["SNCF
+RESEAU", "Comptes Consolid\u00e9s", "EHB", "EHB donn\u00e9s"], "license": "Open Database License (ODbL)", "license_url":
+"https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages": ["fr"], "timezone": null, "modified":
+"2022-03-24T09:56:36+00:00", "modified_updates_on_metadata_change": true, "modified_updates_on_data_change": true,
+"data_processed": "2021-07-01T13:31:21+00:00", "metadata_processed": "2024-02-18T02:14:30.222000+00:00",
+"geographic_reference": ["world_fr"], "geographic_reference_auto": true, "territory": ["France"], "geometry_types":
+null, "bbox": null, "publisher": "SNCF R\u00e9seau", "references": null, "records_count": 432, "attributions": null,
+"source_domain": null, "source_domain_title": null, "source_domain_address": null, "source_dataset": null,
+"shared_catalog": null, "federated": true, "oauth_scope": null, "parent_domain": "datasncf"}, "custom": {"cycle": null,
+"periodicity": "Annuelle"}}}, {"dataset_id": "bilan-actif-2017-cco", "dataset_uid": "da_ir64fm", "has_records": true,
+"features": ["analyze"], "visibility": "domain", "attachments": [], "alternative_exports": [], "data_visible": true,
+"fields": [{"name": "id", "label": "#", "type": "int", "annotations": {}, "description": null}, {"name": "totaux",
+"label": "Totaux", "type": "text", "annotations": {}, "description": null}, {"name": "en_millions_d_euros", "label": "en
+millions d'euros", "type": "text", "annotations": {}, "description": null}, {"name": "31_12_2015", "annotations":
+{"facetsort": "-count"}, "label": "31/12/2015", "type": "int", "description": null}, {"name": "31_12_2016",
+"annotations": {"facetsort": "-count"}, "label": "31/12/2016", "type": "int", "description": null}, {"name":
+"31_12_2017", "annotations": {"facetsort": "-count"}, "label": "31/12/2017", "type": "int", "description": null},
+{"name": "31_12_2018", "annotations": {"facetsort": "-count"}, "label": "31/12/2018", "type": "int", "description":
+null}, {"name": "31_12_2019", "label": "31/12/2019", "type": "text", "annotations": {}, "description": null}, {"name":
+"31_12_2020", "label": "31/12/2020", "type": "text", "annotations": {}, "description": null}, {"name": "column_10",
+"label": "Column 10", "type": "text", "annotations": {}, "description": null}, {"name": "column_11", "label": "Column
+11", "type": "text", "annotations": {}, "description": null}, {"name": "column_12", "label": "Column 12", "type":
+"text", "annotations": {}, "description": null}, {"name": "column_13", "label": "Column 13", "type": "text",
+"annotations": {}, "description": null}, {"name": "column_14", "label": "Column 14", "type": "text", "annotations": {},
+"description": null}, {"name": "column_15", "label": "Column 15", "type": "text", "annotations": {}, "description":
+null}, {"name": "column_16", "label": "Column 16", "type": "text", "annotations": {}, "description": null}, {"name":
+"column_17", "label": "Column 17", "type": "text", "annotations": {}, "description": null}, {"name": "column_18",
+"label": "Column 18", "type": "text", "annotations": {}, "description": null}], "metas": {"dcat": {"created": null,
+"issued": null, "creator": null, "contributor": null, "contact_name": null, "contact_email": null, "accrualperiodicity":
+null, "spatial": null, "temporal": null, "granularity": null, "dataquality": null, "publisher_type": null,
+"conforms_to": null, "temporal_coverage_start": null, "temporal_coverage_end": null, "accessRights": null}, "default":
+{"title": "Bilan actif CCO du groupe SNCF R\u00e9seau depuis 2015", "description": "<p>Bilan actif depuis 2015\u00a0issu
+    des Rapports Financiers du groupe SNCF R\u00e9seau\u00a0au 31 d\u00e9cembre de chaque ann\u00e9e\u00a0(Comptes
+    consolid\u00e9s incluant l'EPIC SNCF RESEAU et ses filiales).</p>", "theme": ["R\u00e9seau"], "keyword": ["SNCF
+RESEAU", "Comptes Consolid\u00e9s", "Bilan", "Actif"], "license": "Open Database License (ODbL)", "license_url":
+"https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages": ["fr"], "timezone": null, "modified":
+"2022-03-24T10:09:10+00:00", "modified_updates_on_metadata_change": true, "modified_updates_on_data_change": true,
+"data_processed": "2021-06-29T07:52:22+00:00", "metadata_processed": "2024-02-18T02:13:12.064000+00:00",
+"geographic_reference": ["world_fr"], "geographic_reference_auto": true, "territory": ["France"], "geometry_types":
+null, "bbox": null, "publisher": "SNCF R\u00e9seau", "references": null, "records_count": 14, "attributions": null,
+"source_domain": null, "source_domain_title": null, "source_domain_address": null, "source_dataset": null,
+"shared_catalog": null, "federated": true, "oauth_scope": null, "parent_domain": "datasncf"}, "custom": {"cycle": null,
+"periodicity": "Annuelle"}}}, {"dataset_id": "api-temps-reel-transilien-old", "dataset_uid": "da_d31jb8", "has_records":
+false, "features": [], "visibility": "domain", "attachments": [{"id":
+"guide_d_utilisation_api_temps_reel_transilien_pdf", "title": "Guide d'utilisation API Temps R\u00e9el Transilien.pdf",
+"mimetype": "application/pdf", "url":
+"https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/api-temps-reel-transilien-old/attachments/guide_d_utilisation_api_temps_reel_transilien_pdf"}],
+"alternative_exports": [], "data_visible": true, "fields": [], "metas": {"dcat": {"created": null, "issued":
+"2012-07-04", "creator": "Transilien", "contributor": null, "contact_name": null, "contact_email": null,
+"accrualperiodicity": null, "spatial": "https://api.transilien.com", "temporal": "Temps r\u00e9el", "granularity": "Gare
+et train Transilien", "dataquality": null, "publisher_type": null, "conforms_to": null, "temporal_coverage_start": null,
+"temporal_coverage_end": null, "accessRights": null}, "default": {"title": "API temps r\u00e9el Transilien",
+"description": "<p style=\"text-align: justify;\">\n\t API donnant acc\u00e8s aux prochains d\u00e9parts pour une gare
+    donn\u00e9e du r\u00e9seau SNCF Transilien.</p>
+<p style=\"text-align: justify;\">\n\tLe nombre d'appels est actuellement limit\u00e9 \u00e0 20
+    appels/minutes.\u00a0Pour obtenir des identifiants d'acc\u00e8s \u00e0 l'API, merci de faire votre \n\t<a
+        href=\"mailto:innovation-transilien@sncf.fr?subject=Demande%20acc%C3%A8s%20API%20prochains%20d%C3%A9parts&amp;body=nom,%20pr%C3%A9nom,organisation,utilisation\"
+        style=\"font-size: 15px;\">demande par mail</a>.</p>
+<p style=\"text-align: justify;\">\n\tAcc\u00e9dez au\u00a0\n\t<a
+        href=\"https://ressources.data.sncf.com/api/datasets/1.0/api-temps-reel-transilien/attachments/guide_d_utilisation_api_temps_reel_transilien_pdf/\"
+        target=\"_blank\">guide d'utilisation de l'API Temps r\u00e9el Transilien</a>.</p>
+<p>\n\tAdresse de l'API :\u00a0\n\t<a href=\"http://api.transilien.com/\">https://api.transilien.com</a></p>", "theme":
+["Horaires et itin\u00e9raires"], "keyword": ["Horaire", "API", "Ile-de-France", "Transilien"], "license": "Open
+Database License (ODbL)", "license_url": "https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages":
+["fr"], "timezone": null, "modified": "2021-03-30T11:37:42+00:00", "modified_updates_on_metadata_change": true,
+"modified_updates_on_data_change": false, "data_processed": null, "metadata_processed":
+"2024-01-10T09:56:12.299000+00:00", "geographic_reference": ["world_fr"], "geographic_reference_auto": true,
+"territory": ["France"], "geometry_types": null, "bbox": null, "publisher": "SNCF Voyageurs", "references": null,
+"records_count": 0, "attributions": null, "source_domain": null, "source_domain_title": null, "source_domain_address":
+null, "source_dataset": null, "shared_catalog": null, "federated": false, "oauth_scope": null, "parent_domain": null},
+"custom": {"cycle": null, "periodicity": null}}}, {"dataset_id": "autres-charges-externes-2017-cco", "dataset_uid":
+"da_nxprgh", "has_records": true, "features": ["analyze"], "visibility": "domain", "attachments": [],
+"alternative_exports": [], "data_visible": true, "fields": [{"name": "id", "label": "#", "type": "int", "annotations":
+{}, "description": null}, {"name": "totaux", "label": "Totaux", "type": "text", "annotations": {}, "description": null},
+{"name": "en_millions_d_euros", "label": "en millions d'euros", "type": "text", "annotations": {}, "description": null},
+{"name": "31_12_2015", "annotations": {"facetsort": "-count"}, "label": "31/12/2015", "type": "int", "description":
+null}, {"name": "31_12_2016", "annotations": {"facetsort": "-count"}, "label": "31/12/2016", "type": "int",
+"description": null}, {"name": "31_12_2017", "annotations": {"facetsort": "-count"}, "label": "31/12/2017", "type":
+"int", "description": null}, {"name": "31_12_2018", "annotations": {"facetsort": "-count"}, "label": "31/12/2018",
+"type": "int", "description": null}, {"name": "31_12_2019", "label": "31/12/2019", "type": "text", "annotations": {},
+"description": null}, {"name": "31_12_2020", "label": "31/12/2020", "type": "text", "annotations": {}, "description":
+null}], "metas": {"dcat": {"created": null, "issued": null, "creator": null, "contributor": null, "contact_name": null,
+"contact_email": null, "accrualperiodicity": null, "spatial": null, "temporal": null, "granularity": null,
+"dataquality": null, "publisher_type": null, "conforms_to": null, "temporal_coverage_start": null,
+"temporal_coverage_end": null, "accessRights": null}, "default": {"title": "Autres charges externes CCO du groupe SNCF
+R\u00e9seau depuis 2015", "description": "<p>Autres charges externes depuis 2015 issues du Rapport Financier du groupe
+    SNCF R\u00e9seau au 31 d\u00e9cembre de chaque ann\u00e9e (Comptes consolid\u00e9s incluant l'EPIC SNCF RESEAU et
+    ses filiales)</p>", "theme": ["R\u00e9seau"], "keyword": ["SNCF RESEAU", "Comptes Consolid\u00e9s", "Charges", "
+Autres Charges Externes"], "license": "Open Database License (ODbL)", "license_url":
+"https://data.sncf.com/pages/licence", "language": "fr", "metadata_languages": ["fr"], "timezone": null, "modified":
+"2022-03-24T10:40:33+00:00", "modified_updates_on_metadata_change": true, "modified_updates_on_data_change": true,
+"data_processed": "2021-07-01T13:22:59+00:00", "metadata_processed": "2024-02-18T02:13:08.156000+00:00",
+"geographic_reference": ["world_fr"], "geographic_reference_auto": true, "territory": ["France"], "geometry_types":
+null, "bbox": null, "publisher": "SNCF R\u00e9seau", "references": null, "records_count": 7, "attributions": null,
+"source_domain": null, "source_domain_title": null, "source_domain_address": null, "source_dataset": null,
+"shared_catalog": null, "federated": true, "oauth_scope": null, "parent_domain": "datasncf"}, "custom": {"cycle": null,
+"periodicity": "Annuelle"}}}]}
