@@ -6,7 +6,7 @@ import sqlite3
 import random
 from config import RE_TOKEN, DEV_ID, DEV_TOKEN, DEVMODE, SNCF_API_KEY
 
-conn = sqlite3.connect("et-mon-train.db")
+conn = sqlite3.connect("./discord/et-mon-train.db")
 c = conn.cursor()
 
 c.execute("CREATE TABLE IF NOT EXISTS servers (server_id INTEGER PRIMARY KEY, prefix TEXT)")
@@ -41,9 +41,17 @@ class Bot(commands.Bot):
 
 bot = Bot()
 
+# function to test answer length and cut if higher than 2000 in lenght
+def cut_message(answer):
+    if len(answer) > 2000:
+        print("Cut du message")
+        return answer[:2000]
+    return answer
+
 async def fetch_test(test_request):
     async with aiohttp.ClientSession() as session:
         async with session.get(f"{test_request}", headers={"Authorization": SNCF_API_KEY}) as response:
+            cut_message(await response.text())
             return await response.json()
 
 @bot.event
